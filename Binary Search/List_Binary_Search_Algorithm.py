@@ -35,10 +35,6 @@ def main(n,target,counter):
                     print("There is no such number")
                     sys.exit(0)
 
-                
-
-
-
         else:
             if isinstance(sub_,list):
                 if target < sub_[0] or target > sub_[-1]:
