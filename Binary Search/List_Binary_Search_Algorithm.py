@@ -3,6 +3,8 @@ import sys
 n=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 m=[1,5,7,9,15,30,33,37,41,42,43,65,69]
 
+#page89, No.6
+
 target=69
 # count=0
 global nul_count
@@ -21,6 +23,7 @@ def main(n,target,counter):
     sub=chunks(n,3)
     print(sub)
     xxx=0
+#when the divided # are individual elements, match the key to each element
     for i in range (len(sub)):
         sub_=sub[i]
         if len(sub_)==1:     
@@ -29,12 +32,15 @@ def main(n,target,counter):
                 print("this is the index")
                 print(counter)
                 sys.exit(0)
-            else:
+            else: ## if the target can not be found, break and print error
                 xxx=xxx+1
                 if xxx==len(sub):
                     print("There is no such number")
                     sys.exit(0)
 
+                
+
+# when the divided # is a list, find the key in a range
         else:
             if isinstance(sub_,list):
                 if target < sub_[0] or target > sub_[-1]:
